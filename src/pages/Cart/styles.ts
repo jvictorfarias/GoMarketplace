@@ -37,6 +37,8 @@ export const ProductTitleContainer = styled.View`
 `;
 
 export const ProductTitle = styled.Text`
+  max-width: 200px;
+  margin-left: 5px;
   font-size: 16px;
 `;
 

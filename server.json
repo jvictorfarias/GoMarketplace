@@ -1,28 +1,40 @@
 {
   "products": [
     {
-      "id": "123",
-      "title": "Nome do produto 01",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 50
+      "id": "1",
+      "title": "Macbook Pro I5 2.7ghz 8gb 1867mhz/ssd 256gb Mod A1502/2015",
+      "image_url": "https://http2.mlstatic.com/macbook-pro-i5-27ghz8gb-1867mhzssd-256gb-mod-a15022015-D_NQ_NP_855801-MLB40023355059_122019-F.webp",
+      "price": 4999
     },
     {
-      "id": "1234",
-      "title": "Nome do produto 02",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 60
+      "id": "2",
+      "title": "Macbook Pro 15 Core I7 8gb De Ram 2011",
+      "image_url": "https://http2.mlstatic.com/macbook-pro-15-core-i7-8gb-de-ram-2011-leia-descrico-D_NQ_NP_703630-MLB41510991485_042020-F.webp",
+      "price": 5999
     },
     {
-      "id": "12345",
-      "title": "Nome do produto 03",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 70
+      "id": "3",
+      "title": "Notebook Pc Gamer Dell G3 Core I5 8gb 256gb Ssd Gtx Linux",
+      "image_url": "https://http2.mlstatic.com/notebook-pc-gamer-dell-g3-core-i5-8gb-256gb-ssd-gtx-linux-D_NQ_NP_701661-MLB40669464602_022020-F.webp",
+      "price": 5499
     },
     {
-      "id": "123456",
-      "title": "Nome do produto 04",
-      "image_url": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/camiseta-ecommerce.jpg",
-      "price": 80
+      "id": "4",
+      "title": "Notebook Lenovo Yoga 520-14ikb Touch Core I5 4gb 1tb I Novo",
+      "image_url": "https://http2.mlstatic.com/notebook-lenovo-yoga-520-14ikb-touch-core-i5-4gb-1tb-i-novo-D_NQ_NP_682106-MLB41512040150_042020-F.webp",
+      "price": 3999
+    },
+    {
+      "id": "5",
+      "title": "Notebook Gamer Acer Predator Triton 500 I7 1tb 32gb Rtx2080",
+      "image_url": "https://http2.mlstatic.com/notebook-gamer-acer-predator-triton-500-i7-1tb-32gb-rtx2080-D_NQ_NP_952504-MLB33024790424_112019-F.webp",
+      "price": 24900
+    },
+    {
+      "id": "6",
+      "title": "Notebook Gamer Acer An515-5771 Ci5 8gb 1tb 128gb 1050 Endless OS",
+      "image_url": "https://http2.mlstatic.com/notebook-gamer-acer-an515-5771-ci5-8gb-1tb-128gb-1050-endles-D_NQ_NP_855167-MLB32770703636_112019-F.webp",
+      "price": 3999
     }
   ]
 }

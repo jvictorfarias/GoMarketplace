@@ -18,6 +18,7 @@ interface Product {
 
 interface CartContext {
   products: Product[];
+  loaded: boolean;
   addToCart(item: Omit<Product, 'quantity'>): void;
   increment(id: string): void;
   decrement(id: string): void;
@@ -25,6 +26,7 @@ interface CartContext {
 const CartContext = createContext<CartContext | null>(null);
 
 const CartProvider: React.FC = ({ children }) => {
+  const [loaded, isloaded] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -37,6 +39,7 @@ const CartProvider: React.FC = ({ children }) => {
         const parsedProducts: Product[] = JSON.parse(savedProducts);
         setProducts(parsedProducts);
       }
+      isloaded(true);
     }
 
     loadProducts();
@@ -96,8 +99,8 @@ const CartProvider: React.FC = ({ children }) => {
   );
 
   const value = React.useMemo(
-    () => ({ addToCart, increment, decrement, products }),
-    [products, addToCart, increment, decrement],
+    () => ({ addToCart, increment, decrement, products, loaded }),
+    [products, addToCart, increment, decrement, loaded],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

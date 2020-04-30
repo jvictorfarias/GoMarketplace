@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import RNBootSplash from 'react-native-bootsplash';
+
 import { View } from 'react-native';
 
 import formatValue from '../../utils/formatValue';
@@ -28,7 +30,7 @@ export interface Product {
 }
 
 const Dashboard: React.FC = () => {
-  const { addToCart } = useCart();
+  const { addToCart, loaded } = useCart();
 
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -40,6 +42,10 @@ const Dashboard: React.FC = () => {
 
     loadProducts();
   }, []);
+
+  useEffect(() => {
+    loaded && RNBootSplash.hide({ duration: 250 });
+  }, [loaded]);
 
   const handleAddToCart = useCallback(
     (item: Omit<Product, 'quantity'>) => {
