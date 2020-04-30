@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import FeatherIcon from 'react-native-vector-icons/Feather';
-import { View, Image } from 'react-native';
+import { View } from 'react-native';
 
 import formatValue from '../../utils/formatValue';
 import { useCart } from '../../hooks/cart';
@@ -28,7 +28,7 @@ export interface Product {
 }
 
 const Dashboard: React.FC = () => {
-  const { addToCart, products: addedProducts } = useCart();
+  const { addToCart } = useCart();
 
   const [products, setProducts] = useState<Product[]>([]);
 
@@ -42,13 +42,12 @@ const Dashboard: React.FC = () => {
   }, []);
 
   const handleAddToCart = useCallback(
-    (item: Product) => {
+    (item: Omit<Product, 'quantity'>) => {
       addToCart({
         id: item.id,
         title: item.title,
         image_url: item.image_url,
         price: item.price,
-        quantity: 1,
       });
     },
     [addToCart],
