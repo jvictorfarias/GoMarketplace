@@ -69,12 +69,12 @@ const CartProvider: React.FC = ({ children }) => {
       const newProducts = [...products];
       const index = newProducts.findIndex(product => product.id === id);
 
-      if (newProducts[index].quantity === 0) {
-        return;
+      if (newProducts[index].quantity === 1) {
+        setProducts(newProducts.filter(product => product.id !== id));
+      } else {
+        newProducts[index].quantity -= 1;
+        setProducts(newProducts);
       }
-
-      newProducts[index].quantity -= 1;
-      setProducts(newProducts);
     },
     [products],
   );
