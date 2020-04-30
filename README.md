@@ -1,6 +1,6 @@
-<div align="center" style="margin-bottom: 20px;">
+<h1 align="center" style="padding: 50px;">
 <img alt="gomarkeplace" src="./img/logo@3x.png" width="auto" heigth="auto"/>
-</div>
+</h1>
 
 <div align="center" style="margin: 20px;">
 
