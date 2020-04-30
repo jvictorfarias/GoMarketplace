@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import FeatherIcon from 'react-native-vector-icons/Feather';
-
 import { View, Image } from 'react-native';
 
 import formatValue from '../../utils/formatValue';
@@ -21,7 +20,7 @@ import {
   ProductButton,
 } from './styles';
 
-interface Product {
+export interface Product {
   id: string;
   title: string;
   image_url: string;
@@ -29,33 +28,43 @@ interface Product {
 }
 
 const Dashboard: React.FC = () => {
-  const { addToCart } = useCart();
+  const { addToCart, products: addedProducts } = useCart();
 
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     async function loadProducts(): Promise<void> {
-      // TODO
+      const { data } = await api.get<Product[]>('/products');
+      setProducts(data);
     }
 
     loadProducts();
   }, []);
 
-  function handleAddToCart(item: Product): void {
-    // TODO
-  }
+  const handleAddToCart = useCallback(
+    (item: Product) => {
+      addToCart({
+        id: item.id,
+        title: item.title,
+        image_url: item.image_url,
+        price: item.price,
+        quantity: 1,
+      });
+    },
+    [addToCart],
+  );
 
   return (
     <Container>
       <ProductContainer>
         <ProductList
           data={products}
-          keyExtractor={item => item.id}
+          keyExtractor={(item: any) => item.id}
           ListFooterComponent={<View />}
           ListFooterComponentStyle={{
             height: 80,
           }}
-          renderItem={({ item }) => (
+          renderItem={({ item }: any) => (
             <Product>
               <ProductImage source={{ uri: item.image_url }} />
               <ProductTitle>{item.title}</ProductTitle>
