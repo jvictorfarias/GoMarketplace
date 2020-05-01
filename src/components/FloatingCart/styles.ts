@@ -13,12 +13,14 @@ export const Container = styled.View`
 `;
 
 export const CartPricing = styled.Text`
+  font-family: 'Roboto-Regular';
   padding: 20px;
 `;
 
 export const CartTotalPrice = styled.Text`
-  font-size: 16px;
+  font-size: 20px;
   color: #fff;
+  font-family: 'Roboto-Medium';
   font-weight: bold;
 `;
 
@@ -33,9 +35,11 @@ export const CartButton = styled.TouchableOpacity`
 `;
 
 export const CartButtonText = styled.Text`
-  font-weight: bold;
+  font-family: 'Roboto-Medium';
+  font-size: 14px;
   color: #fff;
   margin-left: 15px;
   flex: 1;
   margin-right: auto;
+  font-weight: bold;
 `;

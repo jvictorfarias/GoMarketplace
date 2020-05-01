@@ -26,7 +26,9 @@ da compra, tudo através de contexto.
 
 ## :fire: Pŕevia da Aplicação
 
-{...}
+<h1 align="center">
+<img src="./img/preview.gif">
+</h1>
 
 ### :rocket: Tecnologias Usadas
 
@@ -35,6 +37,8 @@ O projeto foi feito com as seguintes tecnologias:
 - [React Native](https://reactnative.dev/)
 - [Feather Icons](https://feathericons.com/)
 - [React Navigation](https://reactnavigation.org/)
+- [React Native Bootsplash](https://www.npmjs.com/package/react-native-bootsplash)
+- [json-server](https://www.npmjs.com/package/json-server)
 - [Jest](https://jestjs.io/)
 - [Styled-Components](https://styled-components.com/)
 

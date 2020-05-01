@@ -35,8 +35,11 @@ export const ProductImage = styled.Image`
 `;
 
 export const ProductTitle = styled.Text`
+  font-family: 'Roboto-Regular';
   font-size: 14px;
   margin-top: 10px;
+  line-height: 20px;
+  color: #3d3d4d;
 `;
 
 export const PriceContainer = styled.View`
@@ -48,8 +51,9 @@ export const PriceContainer = styled.View`
 `;
 
 export const ProductPrice = styled.Text`
+  font-family: 'Roboto-Medium';
+  font-size: 15px;
   font-weight: bold;
-  font-size: 16px;
   color: #e83f5b;
 `;
 

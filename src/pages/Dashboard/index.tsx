@@ -79,7 +79,12 @@ const Dashboard: React.FC = () => {
                   testID={`add-to-cart-${item.id}`}
                   onPress={() => handleAddToCart(item)}
                 >
-                  <FeatherIcon size={20} name="plus" color="#C4C4C4" />
+                  <FeatherIcon
+                    size={20}
+                    name="plus"
+                    color="#C4C4C4"
+                    style={{ marginLeft: 5 }}
+                  />
                 </ProductButton>
               </PriceContainer>
             </Product>

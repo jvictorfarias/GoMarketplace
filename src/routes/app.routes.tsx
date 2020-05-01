@@ -24,6 +24,7 @@ const AppRoutes: React.FC = () => (
       options={{
         headerShown: true,
         headerTransparent: true,
+        headerTitleAlign: 'center',
         headerTitle: () => <Image source={Logo} />,
       }}
       name="Dashboard"
